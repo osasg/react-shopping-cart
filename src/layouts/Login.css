@@ -1,0 +1,19 @@
+.navbar-right-login {
+    background-color: rgb(255, 100, 100);
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    width: 154px;
+    border: 2px solid rgb(255, 100, 100);
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.navbar-right-login:hover {
+    background-color: inherit;
+    color: black;
+}

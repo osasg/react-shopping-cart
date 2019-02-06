@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Navbar from './layouts/Navbar';
+import Banner from './components/Banner';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import './styles.css';
+class ShoppingApp extends Component {
+    render() {
+        return (
+            <Router>
+                <div className="shopping-app">
+                <Navbar />
+                <Banner>
+                </Banner>
+            </div>
+            </Router>
+        );
+    }
+}
+
+ReactDOM.render(
+    <ShoppingApp />,
+    document.getElementById('root')
+);

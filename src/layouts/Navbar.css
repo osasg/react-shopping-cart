@@ -1,0 +1,26 @@
+.navbar {
+    /* border: 5px solid goldenrod; */
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-container {
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    padding: 36px;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.navbar-logo img {
+    flex: 1;
+    width: 8em;
+}
+
+.navbar-menu {
+    flex: 5;
+    display: flex;
+    justify-content: space-evenly;
+}
