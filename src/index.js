@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Navbar from './layouts/Navbar';
-import Banner from './components/Banner';
+import Banner from './banners/Banner';
+import BannerHome from './banners/BannerHome';
+import BannerProduct from './banners/BannerProduct';
 
 import './styles.css';
 class ShoppingApp extends Component {
@@ -11,10 +13,12 @@ class ShoppingApp extends Component {
         return (
             <Router>
                 <div className="shopping-app">
-                <Navbar />
-                <Banner>
-                </Banner>
-            </div>
+                    <Navbar />
+                    <Banner>
+                        <Route path="/" exact component={BannerHome}/>
+                        <Route path="/products" component={BannerProduct} />
+                    </Banner>
+                </div>
             </Router>
         );
     }

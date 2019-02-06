@@ -1,0 +1,42 @@
+.product {
+    background-color: #FFF;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 300px;
+}
+
+.product-content > * {
+    padding: 12px;
+}
+
+.product-action {
+    display: flex;
+}   
+
+.product-action button {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.product-action-view {
+    background-color: rgb(43, 177, 255);
+}
+
+.product-action-buy {
+    background-color: rgb(248, 100, 100);
+}
+
+.product-action button:hover {
+    background-color: inherit;
+    color: black;
+}
