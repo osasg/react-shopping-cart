@@ -26,7 +26,7 @@
 }
 
 .product-container .product {
-    display: inline-block;
+    display: inline-flex;
     margin-right: 24px;
 }
 

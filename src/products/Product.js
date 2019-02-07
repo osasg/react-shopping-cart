@@ -13,10 +13,10 @@ class Product extends Component {
                 </div>
                 <div className="product-content">
                     <div className="product-content-name">
-                        <span>Name</span>
+                        <span>{ name }</span>
                     </div>
                     <div className="product-content-price">
-                        <span>Price</span>
+                        <span>{ price }</span>
                     </div>
                 </div>
                 <div className="product-action">

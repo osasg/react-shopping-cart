@@ -3,18 +3,31 @@
     border-radius: 4px;
     box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, .5);
     overflow: hidden;
+    width: 300px;
+    /* height: 400px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product > * {
+    flex: 1 1 100%;
+    overflow: hidden;
 }
 
 .product-image img {
     width: 300px;
+    height: 240px;
 }
 
 .product-content > * {
+    text-align: center;
     padding: 12px;
+    /* white-space: nowrap; */
 }
 
 .product-action {
     display: flex;
+    align-self: stretch;
 }   
 
 .product-action button {

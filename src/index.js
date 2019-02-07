@@ -6,6 +6,7 @@ import Navbar from './layouts/Navbar';
 import Banner from './banners/Banner';
 import BannerHome from './banners/BannerHome';
 import BannerProduct from './banners/BannerProduct';
+import ProductListing from './products/ProductListing';
 
 import './styles.css';
 class ShoppingApp extends Component {
@@ -16,8 +17,9 @@ class ShoppingApp extends Component {
                     <Navbar />
                     <Banner>
                         <Route path="/" exact component={BannerHome}/>
-                        <Route path="/products" component={BannerProduct} />
+                        <Route path="/products" exact component={BannerProduct} />
                     </Banner>
+                    <Route path="/products" exact component={ProductListing} />
                 </div>
             </Router>
         );

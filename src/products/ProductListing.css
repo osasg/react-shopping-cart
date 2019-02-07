@@ -1,0 +1,12 @@
+.product-listing {
+    margin: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-listing .product-item {
+    margin-top: 40px;
+    flex: 1 1 25%;
+    display: flex;
+    justify-content: center;
+}
