@@ -1,0 +1,22 @@
+.ads-home {
+    margin-top: 24px;
+    display: flex;
+    /* overflow: hidden; */
+}
+
+.ads-home-right,
+.ads-home-middle,
+.ads-home-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.ads-home-left {
+    flex: 20%;
+}
+
+.ads-home-middle,
+.ads-home-right {
+    flex: 1 1 40%;
+}

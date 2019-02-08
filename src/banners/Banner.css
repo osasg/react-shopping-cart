@@ -1,7 +1,6 @@
 .banner {
     background-color: rgb(255, 183, 183);
     height: 100vh;
-    margin: 12rem;
     margin-top: -32px;
     background-image: url('https://images.unsplash.com/photo-1547989013-9be9d00dad2e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixid=eyJhcHBfaWQiOjF9');
     background-size: cover;
