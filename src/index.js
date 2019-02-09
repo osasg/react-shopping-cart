@@ -8,6 +8,7 @@ import BannerHome from './banners/BannerHome';
 import BannerProduct from './banners/BannerProduct';
 import ProductListing from './products/ProductListing';
 import AdsHome from './advertisements/AdsHome';
+import Footer from './footer/Footer';
 
 import './styles.css';
 class ShoppingApp extends Component {
@@ -23,6 +24,7 @@ class ShoppingApp extends Component {
                         </Banner>
                         <Route path="/" exact component={AdsHome} />
                         <Route path="/products" exact component={ProductListing} />
+                        <Footer />
                     </div>
                 </div>
             </Router>
