@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import NavLink from './NavLink';
-import Login from './Login';
+import ButtonRed from '../components/ButtonRed';
 
 import logo from '../logo.png';
 import './Navbar.css';
@@ -12,7 +13,7 @@ class Navbar extends Component {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <img src={logo} alt="logo" />
+                    <Link to="/"><img src={logo} alt="logo" /></Link>
                 </div>
                 <div className="navbar-menu">
                     <NavLink value="Home" link="/" />
@@ -21,7 +22,7 @@ class Navbar extends Component {
                     <NavLink value="Contact" link="/contact" />
                 </div>
                 <div className="navbar-right">
-                    <Login />
+                    <Link to="/login"><ButtonRed>Login</ButtonRed></Link>
                 </div>
             </div>
         </nav>

@@ -1,13 +1,11 @@
 import React from 'react';
 
-import './BannerHome.css';
+import ButtonRed from '../components/ButtonRed';
 
 function BannerHome() {
     return (
         <div className="banner-home">
-            <button>
-                Let's go shopping!
-            </button>
+            <ButtonRed>Let's go shopping</ButtonRed>
         </div>
     );
 }

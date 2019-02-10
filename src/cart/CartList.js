@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CartItem from './CartItem';
-import Total from './Total';
+import CartTotal from './CartTotal';
 
 import './CartList.css';
 
@@ -8,7 +8,7 @@ class CartList extends Component {
     render() {
         return (
             <div className="cart">
-                <div className="list">
+                <div className="cart-list">
                     <CartItem name="AAA" price={1200} quantity={12} />
                     <CartItem name="AAA" price={1200} quantity={12} />
                     <CartItem name="AAA" price={1200} quantity={12} />
@@ -16,7 +16,9 @@ class CartList extends Component {
                     <CartItem name="AAA" price={1200} quantity={12} />
                     <CartItem name="AAA" price={1200} quantity={12} />
                 </div>
-                <Total />
+                <div className="cart-total">
+                    <CartTotal />
+                </div>
             </div>
         );
     }

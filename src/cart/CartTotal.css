@@ -1,0 +1,28 @@
+.total {
+    width: 300px;
+    top: 100px;
+    background-color: rgb(255, 252, 248);
+    border: 1px solid rgb(255, 239, 220);
+    border-radius: 4px;
+    padding: 24px;
+}
+
+.total.scroll-active {
+    position: fixed;
+}
+
+.total-info {
+    padding-bottom: 24px;
+    border-bottom: 2px solid rgb(255, 239, 220);
+}
+
+.info-count,
+.info-money {
+    padding: 12px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-buy {
+    padding-top: 24px;
+}

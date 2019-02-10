@@ -1,17 +1,18 @@
-.banner-home button {
+.btn-red {
+    width: 100%;
     background-color: rgb(255, 100, 100);
-    padding: 24px;
-    font-size: 1em;
     border: 2px solid rgb(255, 100, 100);
-    border-radius: 4px;
+    padding: 16px 28px;
+    font-size: 24px;
     font-weight: bold;
     color: white;
-    cursor: pointer;
     outline: none;
+    border-radius: 4px;
+    cursor: pointer;
     transition: .5s ease;
 }
 
-.banner-home button:hover {
+.btn-red:hover {
     background-color: inherit;
-    color: black;
+    color: darkslategray;
 }

@@ -1,7 +1,7 @@
 .cart-item {
     display: flex;
     padding: 24px;
-    background-color: rgb(255, 252, 252);
+    background-color: rgb(255, 254, 253);
     border-bottom: .8px solid #fbf3e3;
 }
 
@@ -22,7 +22,9 @@
 }
 
 .cart-item-info img {
+    background-color: rgb(255, 252, 248);
     width: 200px;
+    height: 200px;
     float: left;
 }
 
@@ -65,8 +67,7 @@
     border: 0;
     border-top: 1px solid rgba(151, 151, 151, 0.5);
     border-bottom: 1px solid rgba(151, 151, 151, 0.5);
-    width: 25px;
-    padding: 0 12px;
+    width: 50px;
     font-size: 16px;
     text-align: center;
     color: gray;

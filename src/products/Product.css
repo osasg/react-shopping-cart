@@ -17,6 +17,7 @@
 .product-image img {
     width: 300px;
     height: 240px;
+    background-color: rgb(255, 252, 248);
 }
 
 .product-content > * {

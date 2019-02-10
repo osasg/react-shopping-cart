@@ -3,8 +3,13 @@
     margin-top: 24px;
 }
 
-.cart .list {
+.cart-list {
     box-shadow: 0 0 24px 4px rgba(0,0,0, .05);
     flex: 1;
     margin-right: 24px;
+}
+
+.cart-total {
+    position: relative;
+    width: 300px;
 }
