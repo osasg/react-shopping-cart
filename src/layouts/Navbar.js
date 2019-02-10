@@ -17,7 +17,7 @@ class Navbar extends Component {
                 <div className="navbar-menu">
                     <NavLink value="Home" link="/" />
                     <NavLink value="Products" link="/products" />
-                    <NavLink value="Service" link="/services" />
+                    <NavLink value="Cart" link="/cart" />
                     <NavLink value="Contact" link="/contact" />
                 </div>
                 <div className="navbar-right">

@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import './Ads.css';
 
 class Ads extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { flexBasis, height, src } = this.props;
         const imgSrc = src || `https://source.unsplash.com/800x640`;

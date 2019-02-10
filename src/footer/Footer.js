@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -15,13 +16,13 @@ export default function Footer() {
                     <span>Customer care</span>
                 </div>
                 <div className="content">
-                    <ul class="list">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Shopping guide</a></li>
-                        <li><a href="#">Transport</a></li>
-                        <li><a href="#">Pay</a></li>
-                        <li><a href="#">Returns & Refunds</a></li>
-                        <li><a href="#">Warranty Policy</a></li>
+                    <ul className="list">
+                        <li><Link to="#">Help Center</Link></li>
+                        <li><Link to="#">Shopping guide</Link></li>
+                        <li><Link to="#">Transport</Link></li>
+                        <li><Link to="#">Pay</Link></li>
+                        <li><Link to="#">Returns & Refunds</Link></li>
+                        <li><Link to="#">Warranty Policy</Link></li>
                     </ul>
                 </div>
             </div>
@@ -46,21 +47,29 @@ export default function Footer() {
                     <span>Follow us</span>
                 </div>
                 <div className="content">
-                    <div class="social">
-                        <span className="icon"><FontAwesomeIcon icon={['fab', 'facebook']} /></span>
-                        <span className="name">Facebook</span>
+                    <div className="social">
+                        <Link to="#">
+                            <span className="icon"><FontAwesomeIcon icon={['fab', 'facebook']} /></span>
+                            <span className="name">Facebook</span>
+                        </Link>
                     </div>
-                    <div class="social">
-                        <span className="icon"><FontAwesomeIcon icon={['fab', 'twitter']} /></span>
-                        <span className="name">Twitter</span>
+                    <div className="social">
+                        <Link to="#">
+                            <span className="icon"><FontAwesomeIcon icon={['fab', 'twitter']} /></span>
+                            <span className="name">Twitter</span>
+                        </Link>
                     </div>
-                    <div class="social">
-                        <span className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></span>
-                        <span className="name">Linkedin</span>
+                    <div className="social">
+                        <Link to="#">
+                            <span className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></span>
+                            <span className="name">Linkedin</span>
+                        </Link>
                     </div>
-                    <div class="social">
-                        <span className="icon"><FontAwesomeIcon icon={['fab', 'instagram']} /></span>
-                        <span className="name">Instagram</span>
+                    <div className="social">
+                        <Link to="#">
+                            <span className="icon"><FontAwesomeIcon icon={['fab', 'instagram']} /></span>
+                            <span className="name">Instagram</span>
+                        </Link>
                     </div>
                 </div>
             </div>

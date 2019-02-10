@@ -49,3 +49,8 @@
 .footer-column .content .social span:first-child {
     margin-right: 8px;
 }
+
+.follow-us .social a {
+    text-decoration: none;
+    color: inherit;
+}
