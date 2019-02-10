@@ -8,22 +8,25 @@ import ProductListing from './products/ProductListing';
 import AdsHome from './advertisements/AdsHome';
 import Footer from './footer/Footer';
 import CartList from './cart/CartList';
+import { ProductProvider } from './contexts/ProductContext';
 
 import './styles.css';
 class ShoppingApp extends Component {
     render() {
         return (
             <Router>
-                <div className="shopping-app">
-                    <Navbar />
-                    <div className="container">
-                        <Route path="/(products|)/" exact component={Banner} />
-                        <Route path="/" exact component={AdsHome} />
-                        <Route path="/products" exact component={ProductListing} />
-                        <Route path="/cart" exact component={CartList} />
-                        <Footer />
+                <ProductProvider>
+                    <div className="shopping-app">
+                        <Navbar />
+                        <div className="container">
+                            <Route path="/(products|)/" exact component={Banner} />
+                            <Route path="/" exact component={AdsHome} />
+                            <Route path="/products" exact component={ProductListing} />
+                            <Route path="/cart" exact component={CartList} />
+                            <Footer />
+                        </div>
                     </div>
-                </div>
+                </ProductProvider>
             </Router>
         );
     }
