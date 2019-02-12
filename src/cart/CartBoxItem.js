@@ -8,7 +8,7 @@ export default function CartBoxItem(props) {
     return (
         <div className="boxitem">
             <div className="item-img">
-                <img src="https://source.unsplash.com/800x640" alt="Item Img" />
+                <img draggable="false" src="https://source.unsplash.com/800x640" alt="Item Img" />
             </div>
             <div className="item-name">
                 <span>{name}</span>

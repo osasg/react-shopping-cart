@@ -1,5 +1,6 @@
 .boxitem {
     width: 50px;
+    user-select: none;
 }
 
 .boxitem .item-img img {

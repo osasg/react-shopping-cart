@@ -11,4 +11,5 @@
     font-size: 44px;
     color: white;
     cursor: pointer;
+    user-select: none;
 }
