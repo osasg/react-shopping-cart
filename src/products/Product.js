@@ -4,7 +4,7 @@ import './Product.css';
 
 class Product extends Component {
     render() {
-        const { name, price } = this.props;
+        const { name, price, addToCart } = this.props;
 
         return (
             <div className="product">
@@ -21,7 +21,7 @@ class Product extends Component {
                 </div>
                 <div className="product-action">
                     <button className="product-action-view">View</button>
-                    <button className="product-action-buy">Buy</button>
+                    <button onClick={addToCart} className="product-action-buy">Buy</button>
                 </div>
             </div>
         );

@@ -62,12 +62,14 @@
     border-bottom-left-radius: 4px;
 }
 
+.quantity-alter form { display: flex; }
+
 .quantity-alter input {
-    flex: 1;
+    width: 50px;
+    background-color: #f0f6fb;
     border: 0;
     border-top: 1px solid rgba(151, 151, 151, 0.5);
     border-bottom: 1px solid rgba(151, 151, 151, 0.5);
-    width: 50px;
     font-size: 16px;
     text-align: center;
     color: gray;

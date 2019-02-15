@@ -4,8 +4,56 @@ import { Link } from 'react-router-dom';
 import './CartItem.css';
 
 class CartItem extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            quantity: props.quantity
+        }
+        this.btnUp = React.createRef();
+        this.btnDown = React.createRef();
+        this.form = React.createRef();
+
+        this.handleQuantityInput = this.handleQuantityInput.bind(this);
+        this.updateQuantity = this.updateQuantity.bind(this);
+    }
+    
+    updateQuantity(e) {
+        const { alterQuantity } = this.props;
+        let quantity = this.state.quantity;
+        
+        if (e.currentTarget === this.btnUp.current) {
+            quantity += 1;
+        } else if (e.currentTarget === this.btnDown.current) {
+            quantity -= 1;
+        } else {
+            e.preventDefault();
+            quantity = parseInt(e.currentTarget.quantityInput.value);
+        }
+        
+        alterQuantity(quantity);
+        this.setState({
+            quantity: quantity
+        });
+    }
+
+    componentDidMount() {
+        this.btnUp.current.addEventListener('click', this.updateQuantity);
+        this.btnDown.current.addEventListener('click', this.updateQuantity);
+        this.form.current.addEventListener('submit', this.updateQuantity);
+    }
+
+    handleQuantityInput(e) {
+        this.setState({
+            quantity: parseInt(e.target.value)
+        });
+    }
+
     render() {
-        const { name, price, quantity } = this.props;
+        const {
+            name,
+            price,
+            id
+        } = this.props;
 
         return (
             <div className="cart-item">
@@ -28,17 +76,17 @@ class CartItem extends Component {
                         </div>
                         <div className="quantity-alter">
                             <span className="group-btn">
-                                <button className="btn-down">-</button>
+                                <button ref={this.btnDown} className="btn-down">-</button>
                             </span>
-
-                            <input defaultValue={quantity}/>
-                            
+                            <form ref={this.form} className="form-quantity" data-form-id={id}>
+                                <input name="quantityInput" value={this.state.quantity} onChange={this.handleQuantityInput}/>
+                            </form>
                             <span className="group-btn">
-                                <button className="btn-up">+</button>
+                                <button ref={this.btnUp} className="btn-up">+</button>
                             </span>     
                         </div>
                         <div className="quantity-money">
-                            <span>2200</span>
+                            <span>0000</span>
                         </div>
                     </div>
                     <div className="remove">
