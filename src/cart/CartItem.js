@@ -52,7 +52,8 @@ class CartItem extends Component {
         const {
             name,
             price,
-            id
+            id,
+            remove
         } = this.props;
 
         return (
@@ -90,7 +91,7 @@ class CartItem extends Component {
                         </div>
                     </div>
                     <div className="remove">
-                        <Link to="#">Remove</Link>
+                        <Link to="#" onClick={remove}>Remove</Link>
                     </div>
                 </div>
             </div>

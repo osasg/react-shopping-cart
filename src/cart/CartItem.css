@@ -100,3 +100,8 @@
     outline: none;
     text-decoration: none;
 }
+
+.remove-all {
+    display: flex;
+    justify-content: flex-end;
+}

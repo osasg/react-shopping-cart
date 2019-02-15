@@ -6,6 +6,7 @@ import { CartContext } from '../contexts/CartContext';
 import CartEmpty from './CartEmpty';
 
 import './CartList.css';
+import ButtonRed from '../components/ButtonRed';
 
 class CartList extends Component {
     render() {
@@ -17,7 +18,7 @@ class CartList extends Component {
                             if (!products.length) return <h1>LOADING</h1>;
                             return <CartContext.Consumer>
                                 {
-                                    ({ cartItems, wrapProductAlterQuantity }) => {
+                                    ({ cartItems, wrapProductAlterQuantity, removeItem }) => {
                                         if (!cartItems.length) return <CartEmpty />;
                                         return cartItems.map((item, i) => {
                                             const product = products.find(p => item.id === p.id);
@@ -28,6 +29,7 @@ class CartList extends Component {
                                                 price={product.price}
                                                 quantity={item.quantity}
                                                 alterQuantity={wrapProductAlterQuantity(product.id)}
+                                                remove={removeItem(product.id)}
                                             />;
                                         })
                                     }
@@ -35,6 +37,19 @@ class CartList extends Component {
                             </CartContext.Consumer>
                         }}
                     </ProductContext.Consumer>
+                    <CartContext.Consumer>
+                        {({ removeAll, cartItems }) => {
+                            if (cartItems.length === 0) return;
+                            
+                            return (
+                                <div className="remove-all">
+                                    <div onClick={removeAll}>
+                                        <ButtonRed>Remove All</ButtonRed>
+                                    </div>
+                                </div>
+                            );
+                        }}
+                    </CartContext.Consumer>
                 </div>
                 <div className="cart-total">
                     <CartTotal />

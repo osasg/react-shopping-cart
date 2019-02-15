@@ -11,6 +11,8 @@ export class CartProvider extends Component {
 
         this.addToCart = this.addToCart.bind(this);
         this.wrapProductAlterQuantity = this.wrapProductAlterQuantity.bind(this);
+        this.removeItem = this.removeItem.bind(this);
+        this.removeAll = this.removeAll.bind(this);
     }
 
     componentDidMount() {
@@ -53,13 +55,30 @@ export class CartProvider extends Component {
         }
     }
 
+    removeItem(id) {
+        return () => {
+            const cartItems = this.state.cartItems.slice();
+            this.setState({
+                cartItems: cartItems.filter(i => i.id !== id)
+            });
+        }
+    }
+
+    removeAll() {
+        this.setState({
+            cartItems: []
+        });
+    }
+
     render() {
         return (
             <CartContext.Provider
                 value={{
                     cartItems: this.state.cartItems,
                     addToCart: this.addToCart,
-                    wrapProductAlterQuantity: this.wrapProductAlterQuantity
+                    wrapProductAlterQuantity: this.wrapProductAlterQuantity,
+                    removeItem: this.removeItem,
+                    removeAll: this.removeAll
                 }}
             >
                 {this.props.children}
