@@ -1,22 +1,38 @@
 .ads-home {
     margin-top: 24px;
-    display: flex;
-    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.ads-home-left {
+    display: none;   
 }
 
 .ads-home-right,
-.ads-home-middle,
-.ads-home-left {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+.ads-home-middle {
+    display: grid;
+    align-content: start;
+    grid-template-columns: 1fr 1fr;
 }
 
-.ads-home-left {
-    flex: 20%;
+.ads-home-middle {
+    grid-template-rows: 2fr 1fr 1fr;
 }
 
-.ads-home-middle,
 .ads-home-right {
-    flex: 1 1 40%;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.ads-home-middle .ads:first-child {
+    grid-column: span 2;
+}
+
+@media screen and (min-width: 900px) {
+    .ads-home {
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .ads-home-left {
+        display: block;
+    }
+    
 }

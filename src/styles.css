@@ -6,5 +6,11 @@ body {
 }
 
 .container {
-    margin: 0 10em 0 10em;
+    margin: 0;
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        margin: 0 10em 0 10em;
+    }    
 }
